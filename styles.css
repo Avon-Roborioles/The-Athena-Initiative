@@ -1,0 +1,281 @@
+
+/* styles.css — extracted from projectowlwarrior.html */
+:root { --sidebar-width: 260px; --bg: #7bc49d; --accent: #2b6cb0; }
+html { scroll-behavior: smooth; }
+header { position:fixed; top:0; left:0; right:0; height:70px; display:flex; align-items:center; gap:12px; padding:0 12px; background:#6fc1b8; border-bottom:1px solid #eee; z-index:30; }
+.brand { font-weight:600; }
+.menu-btn { background:none; border:0; font-size:40px; padding:8px; cursor:pointer; color:#111}
+/* Sidebar */
+.sidebar { position:fixed; top:0; left:0; height:100%; width:var(--sidebar-width); background:var(--bg); box-shadow: 2px 0 8px rgba(0,0,0,.12); transform:translateX(-110%); transition: transform .25s ease; z-index:40; padding:72px 16px 16px; }
+.sidebar.open { transform:translateX(0); }
+.sidebar nav a { display:block; padding:10px 8px; color:#111; text-decoration:none; border-radius:4px; }
+.sidebar nav a:focus, .sidebar nav a:hover { background:#f0f8ff; outline:none; }
+.close-btn { position:absolute; top:8px; right:8px; background:none; border:0; font-size:20px; color:#111; padding:8px; cursor:pointer; }
+
+/* backdrop */
+.backdrop { position:fixed; inset:0; background:rgba(0,0,0,.3); opacity:0; pointer-events:none; transition:opacity .2s; z-index:35; }
+.backdrop.show { opacity:1; pointer-events:auto; }
+
+/* Content */
+/* main */
+main { padding:80px 16px 24px; max-width:900px; margin:0 auto; max-width: 1100px; }
+img { 
+  max-width:100%; 
+  display:block; 
+  margin:0; 
+}
+img { scroll-margin-top:72px; }
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+}
+.section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.section > * {
+  min-width: 0;
+}
+.section > figure {
+  flex: 1 1 50%;
+}
+
+.section > div {
+  flex: 1 1 50%;
+}
+
+.section-image{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.about-project-text {
+  font-size: .95rem;
+  padding: 0;
+}
+.section-double-image {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  height: auto;
+  max-width: 100%;
+  padding:0;
+}
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 3rem 0;
+}
+
+.section-title {
+  scroll-margin-top: 80px;
+}
+.section-text {
+  padding: 1rem 0rem;
+}
+figure {
+  border: 1px solid #ccc;
+  text-align: center; 
+  flex:1;
+}
+
+figcaption {
+  font-size: 0.8em;
+  color: #555;
+  margin-top: 5px;
+}
+
+.credit {
+  display: block; 
+  font-size: 1em;
+  font-style: italic;
+  color: #666;
+}
+
+h1, h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 2;
+  margin-bottom: .5rem;
+}
+li {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+ul {
+  margin: .5rem 0;
+}
+
+/* Quiz styles */
+.quiz { margin:1.25rem 1.25rem; border-top:1px solid #eee; padding-top:1rem; align-content: stretch; }
+.quiz h2 { margin:0 0 12px; scroll-margin-top: 80px; }
+.question { display:none; }
+.question.active { display:block; }
+.options { list-style:none; padding:0; margin:12px 0; display:grid; gap:8px; }
+.options button { text-align:left; padding:10px 12px; border:1px solid #ddd; background:#fff; border-radius:6px; cursor:pointer; min-height: 44px; font-size: 1rem; color:#111}
+.options button.correct { background:#e6ffed; border-color:#34d399; }
+.options button.incorrect { background:#ffecec; border-color:#f87171; }
+.controls { display:flex; justify-content:space-between; gap:12px; margin-top:12px; align-items:stretch; }
+.badge { display:none; margin-top:12px; font-size:1rem; padding:8px 12px; background:#fff7ed; border:1px solid #ffd580; border-radius:6px; }
+.badge.show { display:inline-block; }
+.score { margin-top:12px; font-weight:600; }
+.nav-arrows { display:flex; gap:8px; min-height: 44px; font-size: 1rem; color:#111;}
+.hidden { display:none; }
+.options a { text-decoration:none; color:#111; font-size: 1rem;}
+
+/* When quiz is completed we remove the content from the flow so the congrats panel sits directly under the badge */
+.quiz.completed .content { display:none; }
+.quiz:not(.completed) #quiz-logo {
+  display: none;
+}
+/* Badge as floating overlay + pop animation */
+.badge { position:fixed; right:20px; bottom:20px; display:none; transform-origin:center; box-shadow:0 6px 20px rgba(0,0,0,.12); border-radius:10px; padding:12px 16px; background:#fff7ed; border:1px solid #ffd580; }
+.badge.show { display:block; animation: pop .45s cubic-bezier(.2,.9,.3,1) both; }
+
+/* Congrats panel */
+.congrats { display:flex; align-items:stretch; gap:12px; padding:12px; border-radius:8px; background:linear-gradient(180deg,#fff 0%, #f9fafb 100%); border:1px solid #eee; box-shadow: 0 6px 18px rgba(0,0,0,.06); margin-top:4px; justify-content:center; }
+.congrats-img { width:220px; height:auto; border-radius:6px; box-shadow: 0 6px 20px rgba(0,0,0,.1); }
+.congrats-text { font-size:1.2rem; text-align:center; }
+.badge-top {
+  display:flex;
+  align-items:stretch;
+  justify-content:center;
+  margin:8px 0 4px;
+  padding:10px 0 6px;
+  background:#fff; /* white box */
+  border-radius:8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  line-height:0; /* remove descender gap */
+}
+.badge-top-img {
+  width:auto; /* adjust as needed */
+  height:auto;
+  display:block;
+  margin:0;
+}
+.congrats-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:6px; }
+.btn { background:#2b6cb0; color:#fff; padding:0 12px; border-radius:6px; text-decoration:none; cursor:pointer; font-size:0.95rem; display:inline-flex; align-items:center;justify-content:center; min-width:160px; min-height:44px; }
+.btn:focus { outline:2px solid #cfe8ff; min-height: 44px; border-radius: 6px; cursor: pointer; font-size: 0.95rem; display: inline-flex; align-items: center; justify-content: center; min-width: 160px; }
+.btn[download] { background:#f59e0b; min-height: 44px; border-radius: 6px; cursor: pointer; font-size: 0.95rem; display: inline-flex; align-items: center; justify-content: center; min-width: 160px;
+}
+.congrats[hidden] { display:none; }
+
+.references {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  margin-top: 1.5rem;
+}
+.references h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.ref-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ref-list li {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+.ref-list li a {
+  word-break: break-word;
+  color: #2b6cb0;
+  text-decoration: none;
+}
+.ref-list li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.75rem;
+}
+.acknowledgements-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  margin-top: 1.5rem;
+}
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f9fafb;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+  color: #555;
+}
+.footer p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+/* Persistent controls */
+.persistent-controls { margin-top:12px; display:flex; justify-content:flex-end; }
+.persistent-controls #quiz-restart { background:#ef4444; color:#fff; border:0; padding:8px 10px; border-radius:6px; cursor:pointer; min-height: 44px; margin-right: 10rem;}
+.persistent-controls #quiz-restart:focus { outline:2px solid #fbcfe8; }
+@keyframes pop { 0% { transform: scale(.6); opacity:0 } 60% { transform: scale(1.08); opacity:1 } 100% { transform: scale(1); opacity:1 } }
+@keyframes completedGlow { from { box-shadow: 0 0 0 rgba(59,130,246,0); } to { box-shadow: 0 14px 40px rgba(59,130,246,.12); } }
+.quiz.completed { animation: completedGlow .45s ease both; }
+
+@media (max-width: 768px) {
+  .section {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    gap: 1.25rem;
+  }
+  figure {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 100%;
+  }
+  section-image {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    max-width:100%;
+  }
+  .section-text {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p,
+  li {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+}
+
