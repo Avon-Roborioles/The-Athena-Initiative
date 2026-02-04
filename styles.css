@@ -25,6 +25,9 @@ img {
   margin: 0;
   scroll-margin-top: 72px;
 }
+.larger{
+  font-size:1.8rem;
+}
 
 /* ==================== Header ==================== */
 header {
@@ -53,7 +56,6 @@ header {
   cursor: pointer;
   color: #111;
 }
-
 /* ==================== Sidebar ==================== */
 .sidebar {
   position: fixed;
@@ -323,10 +325,9 @@ a { text-decoration: underline; text-underline-offset: 2px; color: #2b6cb0; word
   outline: 3px solid #54c4e9;
   outline-offset: 2px;
 }
-
-.download { background-color: #f9a8d4; color: #111; }
-.download2 { background-color: #b8f2ff; color: #111; }
-.download3 { background-color: #e7ceff; color: #111; }
+.download { background-color: #a8f9af; color: #111; }
+.download2 { background-color: #b8d2ff; color: #111; }
+.download3 { background-color: #deffce; color: #111; }
 
 /* ==================== Dividers ==================== */
 .divider { height: 1px; background-color: #eee; margin: 3rem 0; }
