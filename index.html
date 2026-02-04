@@ -1,8 +1,7 @@
 
 
 <html>
-  <script data-goatcounter="https://peytonh60.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+ 
     <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -18,7 +17,7 @@
     <aside id="sidebar" class="sidebar" aria-hidden="true">
       <button class="close-btn" id="closeBtn" aria-label="Close navigation">✕</button>
       <nav aria-label="Main navigation">
-        <a href="#pow1">Home</a>
+        <a href="#athena-title">Home</a>
         <a href="#about-title">About</a>
         <a href="#facts-title">Facts</a>
         <a href="#habitat-loss-title">Habitat</a>
@@ -34,25 +33,23 @@
 
     <main>
 
-      <img id="pow1" src="media/pow-title.png" alt="Home" />
+      <img id="athena-title" src="media/title-header.png" alt="Home" />
 
     <section id="about"class="section">
         <div class="section-text">
-          <h2 id="about-title" class="section-title">The Challenge</h2>
-          <p>Screech owls are an important species in our environment and right now they need your help. With incoming housing developments, businesses, and industries, owls are losing their habitats. <b>Read the page and take the quiz to complete the Owl Warrior Challenge.</b></p>
+          <h2 id="about-title" class="section-title">Our Mission</h2>
+          <p>The Athena Initiative was founded by FIRST Team 14955 to raise awareness about the importance of protecting screech owl habitats and to encourage conservation efforts in local communities. On this site you can learn more about screech owls and find our custominstructions for building owl boxes to help protect their nesting sites.</p>
+          <p>Based out of Avon, Indiana, our team aims to expand our impact in both STEM education and the environment.</p>
         </div>
    <figure>
-        <img src="media/about.jpg" alt="owls in tree" class="section-image" loading="lazy">
+        <img src="media/team-building.jpeg" alt="FTC Team 14955 and robot Athena at competition" class="section-image" loading="lazy">
       <figcaption>
-        15 Mar 2022. Simcoe, Ontario, Canada
-        <span class="credit">Photo by: Jack Starret</span>
+        Team 14955 and robot Athena at competition.
+        <span class="credit">Photo by: Peyton Holloway</span>
       </figcaption>
     </figure>
 
-
-
         </section>
-
     <section id="facts" class="section">
 
       <figure>
@@ -115,89 +112,6 @@
           </ul>
         </div>
     </section>
-
-      <section class="quiz" id="quiz" aria-labelledby="quiz-title">
-        <h2 id="quiz-title">Take the Challenge</h2>
-
-        <div class="badge-top" id="quiz-logo" hidden>
-          <img src="media/badge.gif" alt="Owl Badge GIF" class="badge-top-img" loading="lazy"/>
-        </div>
-
-        <div class="content">
-        <div class="question" data-index="0" id="q0">
-          <p class="prompt">1) Where do screech owls prefer to nest?</p>
-          <ul class="options" role="list">
-            <li><button data-choice="0">A) Dreys; old squirrel nests</button></li>
-            <li><button data-choice="1">B) Cavities; old woodpecker nests</button></li>
-            <li><button data-choice="2">C) Platforms; stick nests in high canopy</button></li>
-            <li><button data-choice="3">D) Burrows; nests dug in the ground</button></li>
-          </ul>
-        </div>
-
-        <div class="question" data-index="1" id="q1">
-          <p class="prompt">2) What do screech owls primarily eat?</p>
-          <ul class="options" role="list">
-            <li><button data-choice="0">A) Fish</button></li>
-            <li><button data-choice="1">B) Small mammals &amp; insects</button></li>
-            <li><button data-choice="2">C) Berries</button></li>
-            <li><button data-choice="3">D) Seeds</button></li>
-          </ul>
-        </div>
-
-        <div class="question" data-index="2" id="q2">
-          <p class="prompt">3) What are color morphs?</p>
-          <ul class="options" role="list">
-            <li><button data-choice="0">A) Owls within one species can be different in color</button></li>
-            <li><button data-choice="1">B) Two different species under one name</button></li>
-            <li><button data-choice="2">C) Male and female are different colors</button></li>
-            <li><button data-choice="3">D) Owls change color with the seasons</button></li>
-          </ul>
-        </div>
-
-        <div class="question" data-index="3" id="q3">
-          <p class="prompt">4) Which best describes how screech owls call?</p>
-          <ul class="options" role="list">
-            <li><button data-choice="0">A) A low coo </button></li>
-            <li><button data-choice="1">B) A high trill</button></li>
-            <li><button data-choice="2">C) A loud bark</button></li>
-            <li><button data-choice="3">D) A soft click</button></li>
-          </ul>
-        </div>
-
-        <div class="question" data-index="4" id="q4">
-          <p class="prompt">5) How can you help owls?</p>
-          <ul class="options" role="list">
-            <li><button data-choice="0">A) Advocate for habitat protections</button></li>
-            <li><button data-choice="1">B) Protect habitat &amp; provide nesting boxes</button></li>
-            <li><button data-choice="2">C) Plant native plants</button></li>
-            <li><button data-choice="3">D) Avoid using pesticides</button></li>
-            <li><button data-choice="4">E) All of the above</button></li>
-          </ul>
-        </div>
-        <div class="controls">
-          <div class="nav-arrows">
-            <button id="q-prev" aria-label="Previous question">◀ Prev</button>
-            <button id="q-next" aria-label="Next question">Next ➜</button>
-          </div>
-        </div>
-          
-      </div>
-   
-        <div class="congrats" id="quiz-congrats" role="region" aria-live="polite" hidden>
-          <div class="congrats-text"><strong>Congratulations Owl Warrior!</strong></div>
-          <div class="congrats-actions">
-            <button id="share-site-url" class="btn">Copy Site URL</button>
-            <a id="share-instagram" class="btn" target="_blank" rel="noopener">Share on Instagram</a>
-            <a id="share-facebook" class="btn" target="_blank" rel="noopener">Share on Facebook</a>
-          </div>
-        </div>
-        <div class="score" id="quiz-score" aria-live="polite"></div>
-        <div class="badge" id="quiz-badge" tabindex="0" role="status" aria-live="polite">🦉 Owl Badge — Perfect score!</div>
-
-        <div class="persistent-controls">
-          <button id="quiz-restart">Restart</button>
-        </div>
-      </section>
     </main>
     <script src="sidebar.js" defer></script>
     <script src="quiz.js" defer></script>
@@ -263,7 +177,7 @@
       </figcaption>
   </section>
 <section class="footer">
-  <p>Copyright &copy; 2025 peytonh60</p>
+  <p>Copyright &copy; 2026 Avon-Roborioles</p>
 </section>
 
     </body>
