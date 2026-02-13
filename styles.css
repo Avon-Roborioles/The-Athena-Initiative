@@ -56,6 +56,7 @@ header {
   cursor: pointer;
   color: #111;
 }
+
 /* ==================== Sidebar ==================== */
 .sidebar {
   position: fixed;
@@ -316,18 +317,63 @@ a { text-decoration: underline; text-underline-offset: 2px; color: #2b6cb0; word
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.download:hover, .download2:hover, .download3:hover {
+.download:hover, .download2:hover, .download3:hover, social-icon:hover {
   transform: translateY(-2px);
   filter: brightness(1.1);
 }
 
-.download:focus, .download2:focus, .download3:focus {
+.download:focus, .download2:focus, .download3:focus, social-icon:focus {
   outline: 3px solid #54c4e9;
   outline-offset: 2px;
 }
 .download { background-color: #a8f9af; color: #111; }
 .download2 { background-color: #b8d2ff; color: #111; }
 .download3 { background-color: #deffce; color: #111; }
+
+.social-icon {
+  display: inline-block; /* Changed from block so they sit side-by-side */
+  width: 44px;           /* Changed from auto to a fixed size */
+  height: 44px;          /* Added a height */
+  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.3s, transform 0.3s;
+  cursor: pointer;
+  vertical-align: middle;
+  margin: .5rem .5rem;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  opacity: 0.8;
+}
+
+/* Specific Images */
+.facebook {
+  background-image: url('media/facebook-logo.png');
+}
+
+.instagram {
+  background-image: url('media/Instagram_icon.png');
+}
+.large-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.header-socials {
+  margin-left: auto; /* This pushes the group to the right */
+  display: flex;
+  align-items: center;
+}
+.other-socials {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 1rem;
+}
+
 
 /* ==================== Dividers ==================== */
 .divider { height: 1px; background-color: #eee; margin: 3rem 0; }

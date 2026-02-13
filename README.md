@@ -1,11 +1,7 @@
-# project-owl-warrior
+# the-athena-initiative
 
-Hello, I constructed this site as part of my Girl Scout Gold Award Project to protect Eastern Screech Owls. 
+Hello, this site was created by FTC Robotics Team 14954 to educate users about the importance of helping owls in our communities.  
 
-The website consists of an article about Eastern Screech Owls and a 5-question quiz you can take to become an "Owl Warrior."
-
-The goal of this site is to educate users of all ages on how to help owls in their community. I designed this site to be shared. 
+The site features an article about owls as well as plans to construct an owl box. We created this resource to be shared. 
 
 Good luck programmers! I hope this site may be useful to you.
-
-https://peytonh60.github.io/project-owl-warrior/
