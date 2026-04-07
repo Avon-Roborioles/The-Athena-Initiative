@@ -12,7 +12,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.8;
   font-size: 1.1rem; /* mobile-first */
   background-color: #f8f9fa;
 }
@@ -169,7 +169,7 @@ figure {
 }
 
 figcaption {
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 1.4;
   color: #555;
   text-align: center;
@@ -177,7 +177,7 @@ figcaption {
 }
 .credit {
   display: block; 
-  font-size: 1em;
+  font-size:.8em;
   font-style: italic;
   color: #666;
 }
@@ -188,7 +188,7 @@ figcaption {
 /* ==================== Typography ==================== */
 h1 { font-size: 1.8rem; line-height: 2.1rem; margin:0 0 1rem 0; font-weight:600; letter-spacing:0.5px; }
 h2 { font-size: 1.4rem; line-height: 1.9rem; margin:0 0 0.75rem 0; font-weight:600; letter-spacing:0.5px; }
-p, li { font-size: 1.05rem; line-height:1.8; margin-bottom:1rem; }
+p, li { font-size: 1.05rem; line-height:1.8; margin-bottom:1rem; padding: .5rem 0;}
 ul { margin:0; }
 a { text-decoration: underline; text-underline-offset: 2px; color: #2b6cb0; word-break: break-word; }
 
